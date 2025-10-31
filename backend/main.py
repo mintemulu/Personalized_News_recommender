@@ -1,0 +1,19 @@
+from fastapi import FastAPI
+from routes import articles, recommend
+from fastapi.middleware.cors import CORSMiddleware
+
+app = FastAPI()
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
+app.include_router(articles.router, prefix="/api")
+app.include_router(recommend.router, prefix="/api")
+
+@app.get("/")
+def home():
+    return {"message": "News Recommender API running"}
