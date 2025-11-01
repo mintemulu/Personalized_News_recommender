@@ -12,7 +12,7 @@ export default function InterestInput({ onSubmit }) {
     <div style={{ marginBottom: "20px" }}>
       <input
         type="text"
-        placeholder="Enter your interests (comma separated)..."
+        placeholder="Enter your interests eg : technology, science"
         value={input}
         onChange={(e) => setInput(e.target.value)}
       />

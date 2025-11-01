@@ -34,3 +34,7 @@ button {
   border-bottom: 1px solid #eee;
   padding: 10px 0;
 }
+button:hover {
+  background: #005bb5;
+  cursor: pointer;
+}
